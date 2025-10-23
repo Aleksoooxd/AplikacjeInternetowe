@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista zadań - TODO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #searchBox {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        #todoList {
+            list-style: none;
+            padding: 0;
+        }
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            background: #f9f9f9;
+        }
+        .todo-item:hover {
+            background: #f0f0f0;
+        }
+        .todo-content {
+            flex-grow: 1;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .todo-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .delete-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .delete-btn:hover {
+            background: #cc0000;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        #addSection {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+        #addSection h3 {
+            margin-top: 0;
+        }
+        #newTaskText {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        #newTaskDate {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        #addButton {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        #addButton:hover {
+            background: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .edit-input {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista zadań TODO</h1>
+
+    <input type="text" id="searchBox" placeholder="Wyszukaj zadanie (minimum 2 znaki)...">
+
+    <ul id="todoList">
+
+    </ul>
+
+    <div id="addSection">
+        <h3>Dodaj nowe zadanie</h3>
+        <input type="text" id="newTaskText" placeholder="Wpisz treść zadania (3-255 znaków)...">
+        <div>
+            <input type="datetime-local" id="newTaskDate">
+            <button id="addButton">➕</button>
+        </div>
+        <div id="errorMessage" class="error"></div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
