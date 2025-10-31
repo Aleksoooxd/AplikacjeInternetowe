@@ -184,6 +184,7 @@ ul li::before {
 }
 
 .team-member:hover {
+    transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border-color: var(--color-accent);
 }
